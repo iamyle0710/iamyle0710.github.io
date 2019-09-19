@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto",sans-serif;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    /* background: url(../../assets/img/bg.png) repeat; */
+}
+
+.navBar {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.container { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 190px;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+}
+
+.header .portrait .person{
+    display: flex;
+    flex-direction: column;
+}
+
+.header .portrait{
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .portrait img{
+    width: 150px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.header .logo {
+    box-sizing: content-box;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo .name{
+    font-size: 26px;
+    color: #ffffff !important;
+}
+
+.header .logo .title{
+    color: #33846f !important;
+    font-weight: 100;
+}
+.header .menu{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    transition: 0.7s;
+}
+
+.header .menu a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.4s;
+    height: 20px;
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    /* background-color: #63a4ff; */
+    /* background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%); */
+}
+
+.header .showMenuBtn, 
+.header .hideMenuBtn{
+    font-size: 30px;
+    transition: 0.4s;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.header .menu a:hover{
+    background-color: #b0dee4;
+    /* border-left: 3px solid; */
+    color: #3eadcf;
+    /* opacity: 0.5; */
+}
+
+.header .showMenuBtn:hover,
+.header .hideMenuBtn:hover{
+    color: #aaa;
+}
+
+.contentContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.contentContainer section{
+    display: block;
+    flex-shrink: 0;
+    padding: 10px 5px;
+    color: #333;
+}
+
+.contentContainer section .mainTitle{
+    line-height: 1;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -100;
+}
+
+
+/* About Me */
+#aboutme .section{
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutme .opening{
+    border-left: 5px solid #9fe2cd;
+    color: #909090;
+    font-size: 22px;
+    font-weight: 100;
+    margin: 0px 0 20px 10px;
+    padding: 10px;
+}
+
+#aboutme p{
+    font-size: 18px;
+    font-weight: 100;
+    color: #929292;
+    margin: 10px 0 10px 20px;
+    line-height: 1.5;
+}
+
+#aboutme .type{
+    color: #20a5ce;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 30px 0 10px 20px;
+    display: flex;
+}
+
+#aboutme .timeline{
+    position: relative;
+    margin: 0 0 0 20px;
+}
+
+#aboutme .timeline .timelineElement{
+    display: flex;
+    flex-direction: row;
+}
+
+#aboutme .timeline .timelineElementDate{
+    width: 150px;
+    color: #999;
+    text-align: right;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+#aboutme .timeline .timelineBullet{
+    padding: 6px 15px;
+    font-size: 6px;
+    display: flex;
+    color: #3eadcf;
+}
+
+#aboutme .timeline .timelineElementContents{
+    display: flex;
+    flex: 1;
+    padding: 0 0 25px;
+    font-weight: 100;
+}
+
+#aboutme .timeline ul{
+    list-style-type: none;
+}
+
+#aboutme .timeline .timelineBullet::after{
+    content: '';
+    width: 1px;
+    background: #bfbfbf;
+    position: relative;
+    left: -3px;
+    top: 7px;
+    height: 100%;
+    z-index: 0;
+}
+
+#aboutme .timeline .educationText{
+    flex: 1;
+}
+
+#aboutme .timeline .educationText .educationTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutme .timeline .educationText .educationTitle .name{
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    color: #525252;
+    max-width: 450px;
+}
+
+#aboutme .timeline .educationText .educationTitle .degree{
+    flex: 1;
+}
+#aboutme .timeline .educationText .educationTitle .gpa{
+    background: #3eadcf;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 10px;
+    border-radius: 2px;
+    margin: 0 5px;
+    min-width: 50px;
+}
+
+#aboutme .timeline .educationText .educationTitle .location{
+    color: #75c7a7;
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+#aboutme .timeline .educationText ul{
+    list-style-type: circle;
+    padding: 10px 25px;
+    color: #6d6d6d;
+}
+
+#aboutme .timeline .educationText ul li{
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+
+/* Experience */
+#experience .section{
+    display: flex;
+    flex-direction: column;
+}
+
+#experience .timeline{
+    position: relative;
+}
+
+#experience .timeline .timelineElement{
+    display: flex;
+    flex-direction: row;
+}
+
+#experience .timeline .timelineElementDate{
+    width: 150px;
+    color: #999;
+    text-align: right;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+#experience .timeline .timelineBullet{
+    padding: 6px 15px;
+    font-size: 6px;
+    display: flex;
+    color: #3eadcf;
+}
+
+#experience .timeline .timelineElementContents{
+    display: flex;
+    flex: 1;
+    padding: 0 0 25px;
+    font-weight: 100;
+}
+
+#experience .timeline ul{
+    list-style-type: none;
+}
+
+#experience .timeline .timelineBullet::after{
+    content: '';
+    width: 1px;
+    background: #bfbfbf;
+    position: relative;
+    left: -3px;
+    top: 7px;
+    height: 100%;
+    z-index: 0;
+}
+
+#experience .timeline .experienceText{
+    flex: 1;
+}
+
+#experience .timeline .experienceText .careerTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 10px;
+}
+
+#experience .timeline .experienceText .careerTitle .thumbnail{
+    display: flex;
+    width: 40px;
+    margin: 0 10px 0 0;
+}
+
+#experience .timeline .experienceText .careerTitle .thumbnail img{
+    width: 100%;
+}
+
+#experience .timeline .experienceText .careerTitle .title{
+    display: flex;
+    flex-direction: column;
+}
+
+#experience .timeline .experienceText .careerTitle .title .name{
+    font-weight: 400;
+    text-transform: uppercase;
+    /* padding: 3px 0; */
+}
+
+#experience .timeline .experienceText .careerTitle .title .location{
+    color: #aaa;
+    font-size: 10px;
+    color: #75c7a7;
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+#experience .timeline .experienceText .description{
+    color: #929292;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+    display: flex;
+    line-height: 1.5;
+}
+#experience .timeline .experienceText .type{
+    color: #20a5ce;
+    /* font-size: 14px; */
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+    display: flex;
+}
+
+#experience .timeline .experienceText ul{
+    list-style-type: circle;
+    padding: 0 25px;
+    color: #929292;
+}
+
+#experience .timeline .experienceText ul li{
+    /* font-size: 14px; */
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+
+/* Portfolio */
+#portfolio .section{
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .timeline{
+    position: relative;
+}
+
+#portfolio .timeline .timelineElement{
+    display: flex;
+    flex-direction: row;
+}
+
+#portfolio .timeline .timelineElementDate{
+    width: 150px;
+    color: #999;
+    text-align: right;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+#portfolio .timeline .timelineBullet{
+    padding: 6px 15px;
+    font-size: 6px;
+    display: flex;
+    color: #3eadcf;
+}
+
+#portfolio .timeline .timelineElementContents{
+    display: flex;
+    flex: 1;
+    padding: 0 0 25px;
+    font-weight: 100;
+}
+
+#portfolio .timeline ul{
+    list-style-type: none;
+}
+
+#portfolio .timeline .timelineBullet::after{
+    content: '';
+    width: 1px;
+    background: #bfbfbf;
+    position: relative;
+    left: -3px;
+    top: 7px;
+    height: 100%;
+    z-index: 0;
+}
+
+#portfolio .timeline .projectText,
+#portfolio .timeline .projectMedia {
+    flex: 1;
+}
+
+#portfolio .timeline .projectText .projectTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .timeline .projectText .projectTitle .name{
+    font-weight: 400;
+    /* padding: 3px 0; */
+}
+
+#portfolio .timeline .projectText .projectTitle .location{
+    color: #aaa;
+    font-size: 10px;
+    color: #75c7a7;
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+#portfolio .timeline .projectText ul{
+    list-style-type: circle;
+    padding: 10px 25px;
+    color: #6d6d6d;
+}
+
+#portfolio .timeline .projectText ul li{
+    /* font-size: 14px; */
+    margin: 0 0 10px;
+    line-height: 1.5;
+    color: #929292;
+    font-weight: 100;
+}
+
+#portfolio .timeline .projectMedia iframe{
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    border-radius: 3px;
+    min-height: 200px;
+}
+#portfolio .timeline .projectMedia img{
+    width: calc(100% - 20px);
+    border-radius: 3px;
+    margin: 0 10px;
+    max-height: 568px;
+}
+
+#portfolio .timeline .projectTechnologies .technologiesTitle{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666;
+    padding-bottom: .5em;
+}
+
+#portfolio .timeline .projectTechnologies .techTags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio .timeline .projectTechnologies .techTags .tag{
+    margin: 5px;
+    font-size: 12px;
+    background: #3eadcf;
+    color: #fff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+/* Contact ME */
+#contactme .section{
+    height: 350px;
+}
+#contactme .description{
+    font-size: 18px;
+    font-weight: 100;
+    color: #929292;
+    margin: 0 0 25px;
+    display: flex;
+}
+
+#contactme .vcard{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-left: 20px;
+}
+
+#contactme .vcard .row{
+    display: flex;
+    flex-direction: row;
+    font-weight: 100;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#contactme .vcard .type{
+    width: 120px;
+}
+
+#contactme .vcard .link{
+    flex: 1;
+}
+
+#contactme .vcard .link a{
+    color: #489d94;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px){
+    .header .showMenuBtn, 
+    .header .hideMenuBtn{
+        display: block;
+        margin: 0 10px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .header {
+        width : 100%;
+        height: auto;
+    }
+
+    .header .menu{
+        text-align: right;
+    }
+
+    #chk ~ .menu a{
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+    #chk:checked ~ .menu a{
+        height: 20px;
+        padding: 10px;
+    }
+
+    /* Portfolio */
+    #experience .timeline .timelineElement,
+    #portfolio .timeline .timelineElement{
+        flex-direction: column;
+    }
+
+    #experience .timeline .timelineElementContents,
+    #portfolio .timeline .timelineElementContents{
+        flex-direction: column;
+    }
+
+    #experience .timeline .timelineElementDate,
+    #portfolio .timeline .timelineElementDate{
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #aboutme .timeline .timelineElementDate{
+        width: 70px;
+        word-break: break-all;
+    }
+
+    #experience .timeline .timelineBullet,
+    #portfolio .timeline .timelineBullet{
+        display: none;
+    }
+
+    #portfolio .timeline .projectMedia{
+        margin-top: 30px;
+    }
+
+    #portfolio .timeline .projectMedia iframe,
+    #portfolio .timeline .projectMedia img{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .header .portrait img{
+        width: 50px;
+    }
+}
