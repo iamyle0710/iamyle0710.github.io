@@ -480,6 +480,12 @@ body{
     padding: 3px 0;
 }
 
+#portfolio .timeline .projectText .projectTitle .demoLink{
+    font-size: 12px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
 #portfolio .timeline .projectText ul{
     list-style-type: circle;
     padding: 10px 25px;
@@ -505,6 +511,10 @@ body{
     border-radius: 3px;
     margin: 0 10px;
     max-height: 568px;
+}
+
+#portfolio .timeline .projectTechnologies{
+    margin-bottom: 10px;
 }
 
 #portfolio .timeline .projectTechnologies .technologiesTitle{
