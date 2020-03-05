@@ -457,8 +457,13 @@ body{
     z-index: 0;
 }
 
-#portfolio .timeline .projectText,
-#portfolio .timeline .projectMedia {
+#portfolio .timeline .projectMedia{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#portfolio .timeline .projectText{
     flex: 1;
 }
 
@@ -640,6 +645,8 @@ body{
 
     #portfolio .timeline .projectMedia{
         margin-top: 30px;
+        display: flex;
+        justify-content: center;
     }
 
     #portfolio .timeline .projectMedia iframe,
