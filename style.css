@@ -485,7 +485,7 @@ body{
     padding: 3px 0;
 }
 
-#portfolio .timeline .projectText .projectTitle .demoLink{
+#portfolio .timeline .projectText{
     font-size: 12px;
     margin: 5px 0;
     text-transform: uppercase;
